@@ -19,8 +19,9 @@ and open the template in the editor.
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-					aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
 					<a class="navbar-brand" href="/inicio"><i class="bi bi-house"></i></a>
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -36,7 +37,7 @@ and open the template in the editor.
 								<li><a class="dropdown-item" href="/autor/list">Lista Autores</a></li>
 							</ul>
 						</li>
-	
+
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,7 +48,7 @@ and open the template in the editor.
 								<li><a class="dropdown-item" href="/libro/list">Lista Libros</a></li>
 							</ul>
 						</li>
-	
+
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,16 +61,16 @@ and open the template in the editor.
 						</li>
 					</ul>
 				</div>
-				<div class="btn-logout">
-					<form th:action="@{/logout}" method="POST">
-						<button type="submit" class="btn btn-secondary btn-sm">Cerrar Sesión</button>
-						<a href="/inicio"><button type="submit" class="btn btn-secondary btn-sm">Ir al inicio</button></a>
-					</form>
+				<div>
+					<a href="/inicio"><button type="submit" class="btn btn-secondary btn-sm">Ir al inicio</button></a>
 				</div>
+				<form th:action="@{/logout}" method="POST" class="p-1">
+					<button type="submit" class="btn btn-danger btn-sm">Cerrar Sesión</button>
+				</form>
 			</div>
 		</nav>
 	</header>
-	
+
 	<table class="table caption-top">
 		<thead>
 			<tr>
@@ -101,10 +102,10 @@ and open the template in the editor.
 					<a th:href="@{/editorial/eliminar(id = ${edit.id})}">
 						<button type="button" class="btn btn-danger">Eliminar</button>
 					</a>
-					
+
 					<!-- Modal -->
 					<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-						tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+						tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content bg-secondary">
 								<div class="modal-header bg-light">
@@ -138,7 +139,6 @@ and open the template in the editor.
 								<div class="modal-footer btn-light">
 									<button type="button" class="btn btn-secondary"
 										data-bs-dismiss="modal">Close</button>
-
 								</div>
 							</div>
 						</div>

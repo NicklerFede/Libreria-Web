@@ -57,12 +57,12 @@
 					</ul>
 				</div>
 
-				<div class="btn-logout">
-					<form th:action="@{/logout}" method="POST">
-						<a href="/inicio"><button type="submit" class="btn btn-secondary btn-sm">Ir al inicio</button></a>
-						<button type="submit" class="btn btn-secondary btn-sm">Cerrar Sesión</button>
-					</form>
+				<div>
+					<a href="/inicio"><button type="submit" class="btn btn-secondary btn-sm">Ir al inicio</button></a>
 				</div>
+				<form th:action="@{/logout}" method="POST" class="p-1">
+					<button type="submit" class="btn btn-danger btn-sm">Cerrar Sesión</button>
+				</form>
 			</div>
 		</nav>
 	</header>

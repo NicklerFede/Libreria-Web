@@ -18,102 +18,106 @@ and open the template in the editor.
 </head>
 
 <body class="img-fondo">
-<header>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<a class="navbar-brand" href="/inicio"><i class="bi bi-house"></i></a>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							Autores
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<li><a class="dropdown-item" href="/autor">Formulario Autor</a></li>
-							<li><a class="dropdown-item" href="/autor/list">Lista Autores</a></li>
-						</ul>
-					</li>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<a class="navbar-brand" href="/inicio"><i class="bi bi-house"></i></a>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Autores
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="/autor">Formulario Autor</a></li>
+								<li><a class="dropdown-item" href="/autor/list">Lista Autores</a></li>
+							</ul>
+						</li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							Libros
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<li><a class="dropdown-item" href="/libro">Formulario Libro</a></li>
-							<li><a class="dropdown-item" href="/libro/list">Lista Libros</a></li>
-						</ul>
-					</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Libros
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="/libro">Formulario Libro</a></li>
+								<li><a class="dropdown-item" href="/libro/list">Lista Libros</a></li>
+							</ul>
+						</li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							Editoriales
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<li><a class="dropdown-item" href="/editorial">Formulario Editorial</a></li>
-							<li><a class="dropdown-item" href="/editorial/list">Lista Editoriales</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="btn-logout">
-				<form th:action="@{/logout}" method="POST">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Editoriales
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="/editorial">Formulario Editorial</a></li>
+								<li><a class="dropdown-item" href="/editorial/list">Lista Editoriales</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div>
 					<a href="/inicio"><button type="submit" class="btn btn-secondary btn-sm">Ir al inicio</button></a>
-					<button type="submit" class="btn btn-secondary btn-sm">Cerrar Sesión</button>
+				</div>
+				<form th:action="@{/logout}" method="POST" class="p-1">
+					<button type="submit" class="btn btn-danger btn-sm">Cerrar Sesión</button>
 				</form>
 			</div>
-		</div>
-	</nav>
-</header>
+		</nav>
+	</header>
 
-<div class="row row-cols-1 row-cols-md-3 m-sm-5">
-	<div class="col">
-	  <div class="card h-100">
-		<img src="/img/card-index.jpg" class="card-img-top" alt="Libros" height="250px"/>
-		<div class="card-body">
-		  <h5 class="card-title">Libros</h5>
-		  <p class="card-text">
-			¡En esta seccion podras llevar el registro de todos tus libros!
-		  </p>
+	<div class="row row-cols-1 row-cols-md-3 m-sm-5">
+		<div class="col">
+			<div class="card h-100">
+				<img src="/img/card-index.jpg" class="card-img-top" alt="Libros" height="250px" />
+				<div class="card-body">
+					<h5 class="card-title">Libros</h5>
+					<p class="card-text">
+						¡En esta seccion podras llevar el registro de todos tus libros!
+					</p>
+				</div>
+				<div class="card-footer">
+					<a href="/libro" class="btn btn-secondary btn-lg" tabindex="-1" role="button"
+						aria-disabled="true">Cargar Libros</a>
+				</div>
+			</div>
 		</div>
-		<div class="card-footer">
-			<a href="/libro" class="btn btn-secondary btn-lg" tabindex="-1" role="button" aria-disabled="true">Cargar Libros</a>
+		<div class="col">
+			<div class="card h-100">
+				<img src="/img/Autor.jpeg" class="card-img-top" alt="Autor" height="250px" />
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">¡En esta seccion podras llevar el registro de todos los Autores!</p>
+				</div>
+				<div class="card-footer">
+					<a href="/autor" class="btn btn-secondary btn-lg" tabindex="-1" role="button"
+						aria-disabled="true">Cargar Autores</a>
+				</div>
+			</div>
 		</div>
-	  </div>
+		<div class="col">
+			<div class="card h-100">
+				<img src="/img/editorial.jpg" class="card-img-top" alt="Palm Springs Road" height="250px" />
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">
+						¡En esta seccion podras llevar el registro de todas las Editoriales!
+					</p>
+				</div>
+				<div class="card-footer">
+					<a href="/editorial" class="btn btn-secondary btn-lg" tabindex="-1" role="button"
+						aria-disabled="true">Cargar Editoriales</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="col">
-	  <div class="card h-100">
-		<img src="/img/Autor.jpeg" class="card-img-top" alt="Autor" height="250px"/>
-		<div class="card-body">
-		  <h5 class="card-title">Card title</h5>
-		  <p class="card-text">¡En esta seccion podras llevar el registro de todos los Autores!</p>
-		</div>
-		<div class="card-footer">
-			<a href="/autor" class="btn btn-secondary btn-lg" tabindex="-1" role="button" aria-disabled="true">Cargar Autores</a>
-		</div>
-	  </div>
-	</div>
-	<div class="col">
-	  <div class="card h-100">
-		<img src="/img/editorial.jpg" class="card-img-top" alt="Palm Springs Road" height="250px"/>
-		<div class="card-body">
-		  <h5 class="card-title">Card title</h5>
-		  <p class="card-text">
-			¡En esta seccion podras llevar el registro de todas las Editoriales!
-		  </p>
-		</div>
-		<div class="card-footer">
-			<a href="/editorial" class="btn btn-secondary btn-lg" tabindex="-1" role="button" aria-disabled="true">Cargar Editoriales</a>
-		</div>
-	  </div>
-	</div>
-  </div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
